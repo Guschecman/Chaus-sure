@@ -58,13 +58,13 @@ lancer.addEventListener('click', envoyer);
 const explorer = document.getElementById('EnSavoir');
 
 function redirection(){
-    window.location.href="http://127.0.0.1:5500/collection.html?id=surete";
+    window.location.href="collection.html?id=surete";
 }
 
 const explorer2 = document.getElementById('EnSavoir2');
 
 function redirection2(){
-    window.location.href="http://127.0.0.1:5500/collection.html?id=ete";
+    window.location.href="collection.html?id=ete";
 }
 explorer2.addEventListener('click', redirection2);
 explorer.addEventListener('click', redirection);
