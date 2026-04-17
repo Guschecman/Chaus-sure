@@ -4,7 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.container {
+    display: flex;
+    flex-direction: row;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff;
@@ -112,6 +115,10 @@ img {
     
     header {
         padding: 20px;
+        font-size: 1.2rem;
+    }
+    .container {
+        flex-direction: column;
     }
 }
 
