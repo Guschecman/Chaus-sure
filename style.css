@@ -4,10 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container {
-    display: flex;
-    flex-direction: row;
-}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff;
@@ -20,7 +17,10 @@ header {
     display: flex;
     align-items: center;
     padding: 20px 50px;
- 
+    position : sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
 }
 
 header span {
@@ -112,10 +112,6 @@ img {
     
     header {
         padding: 20px;
-        font-size: 1.2rem;
-    }
-    .container {
-        flex-direction: column;
     }
 }
 
@@ -167,7 +163,7 @@ section#collection {
     height: auto;
     border-radius: 25px; /* L'arrondi de la photo */
     box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Petit effet de profondeur */
-    margin-left: 400px;
+    margin-left:0;
 }
 
 /* Correction pour mobile */
@@ -297,6 +293,32 @@ section#collection2 {
 
 /* Adaptabilité pour mobile : on empile les colonnes */
 @media (max-width: 768px) {
+    section#principale h1{
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+    }
+    section#principale p{
+        font-size: 1rem;
+    }
+    section#collection2{
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    #col2{
+        align-items: center;
+        order:1;
+    }
+    #ete{
+        order:2;
+    }
+    #EnSavoir, #EnSavoir2{
+        width: 180px;
+        height: auto;
+        padding: 15px;
+        font-size: 1rem;
+        margin-left: 0;
+    }
     .container-marques {
         flex-direction: column;
     }
