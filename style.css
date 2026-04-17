@@ -1,0 +1,483 @@
+/* Reset de base pour supprimer les marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* Style du Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    position : sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+header span {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    flex-grow: 1; /* Pousse les boutons vers la droite */
+}
+
+header button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 30px;
+    color: #000000;
+}
+
+/* Style de la section principale */
+section#principale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+section#principale h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+section#principale p {
+    font-size: 24px;
+    color: #888888;
+    font-weight: 400;
+}
+/* Cache l'image vide si aucune source n'est définie */
+img {
+    margin-top: 40px;
+    border-radius: 15px;
+}
+
+#partenaires{
+    margin-top: 40px;
+}
+
+.partenaires-wrapper {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.partenaires-track {
+    display: flex;
+    gap: 100px;
+    animation: scroll 10s linear infinite;
+    width: max-content; /* S'adapte au contenu */
+}
+
+.partenaires-track img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%); /* Optionnel : logos en gris */
+    opacity: 0.6;
+}
+
+.partenaires-track img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* -50% car les logos sont dupliqués */
+}
+
+/* Adaptabilité mobile */
+@media (max-width: 768px) {
+    section#1 h1 {
+        font-size: 2.5rem;
+    }
+    
+    header {
+        padding: 20px;
+    }
+}
+
+
+
+/* 2. Conteneur principal (Texte à gauche, Image à droite) */
+section#collection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    padding: 0 10%;
+    gap: 60px; /* Espace entre le bloc texte et l'image */
+}
+
+/* 3. Bloc de gauche (Texte) */
+#col1 {
+    display: flex;
+    flex-direction: column; /* Force p à être EN DESSOUS de h1 */
+    align-items: flex-start; /* Aligne tout à gauche */
+    flex: 1;
+}
+
+#col1 h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 15px; /* Espace sous le titre */
+    line-height: 1.1;
+}
+
+#col1 p {
+    font-size: 1.2rem;
+    color: #888888; /* Couleur grise */
+    margin-bottom: 40px; /* Espace avant le bouton */
+}
+
+/* 4. Création du bouton noir (En savoir +) */
+/* Comme il n'est pas dans ton HTML, on l'ajoute via CSS */
+
+
+/* 5. Bloc de droite (Image) */
+
+
+/* Style de l'image (Coins arrondis comme sur la photo) */
+#surete {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 25px; /* L'arrondi de la photo */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Petit effet de profondeur */
+    margin-left: 400px;
+}
+
+/* Correction pour mobile */
+@media (max-width: 900px) {
+    section#collection {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    #col1 {
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    #col1 h1 {
+        font-size: 2.5rem;
+    }
+}
+
+#EnSavoir{
+  
+    background-color: #000000;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 30px;
+    color: white;
+    width: 110px;
+    height: 100px;
+}
+#EnSavoir2{
+  
+    background-color: #000000;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 30px;
+    color: white;
+    width: 110px;
+    height: 100px;
+}
+
+section#collection2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    padding: 0 10%;
+    gap: 10px; /* Espace entre le bloc texte et l'image */
+}
+#col2 {
+    display: flex;
+    flex-direction: column; /* Force p à être EN DESSOUS de h1 */
+    align-items: flex-start; /* Aligne tout à gauche */
+    flex: 1;
+}
+
+#col2 h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 15px; /* Espace sous le titre */
+    line-height: 1.1;
+}
+
+#col2 p {
+    font-size: 1.2rem;
+    color: #888888; /* Couleur grise */
+    margin-bottom: 40px; /* Espace avant le bouton */
+}
+
+#ete {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 25px; /* L'arrondi de la photo */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Petit effet de profondeur */
+    margin-right: 400px;
+}
+#promesse{
+    background-color:azure;
+    min-height: 35vh;
+    padding-top: 50px;
+    padding-left: 30px;
+    
+}
+/* Le conteneur qui aligne les 3 colonnes */
+.container-marques {
+    display: flex;
+    justify-content: center; /* Centre les colonnes horizontalement */
+    gap: 40px;               /* Espace entre les colonnes */
+    padding: 50px 10%;       /* Espace intérieur pour ne pas toucher les bords */
+}
+
+/* Style de chaque colonne */
+.bloc-marque {
+    flex: 1;                 /* Donne la même largeur aux 3 colonnes */
+    display: flex;
+    flex-direction: column;  /* Aligne hr, h2 et p verticalement */
+}
+
+/* La barre horizontale */
+.bloc-marque hr {
+    border: 0;
+    border-top: 3px solid #000000; /* Couleur grise claire */
+    margin-bottom: 25px;           /* Espace entre la barre et le titre */
+    width: 100%;
+}
+
+/* Le titre */
+.bloc-marque h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+/* Le texte */
+.bloc-marque p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #666; /* Gris légèrement plus foncé pour la lisibilité */
+}
+
+/* Adaptabilité pour mobile : on empile les colonnes */
+@media (max-width: 768px) {
+    .container-marques {
+        flex-direction: column;
+    }
+}
+.footer-content{
+     font-size: 1.1rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Le fond qui couvre tout l'écran */
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond noir transparent */
+    display: flex;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center;     /* Centrage vertical */
+    z-index: 9999;  
+    min-height: 50vh;         /* S'assure d'être au-dessus de tout */
+}
+
+#popinfo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond noir transparent */
+    display: flex;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center;     /* Centrage vertical */
+    z-index: 9999;  
+    min-height: 50vh;         /* S'assure d'être au-dessus de tout */
+}
+
+/* La petite boîte blanche au milieu */
+.oui {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Important : la classe pour cacher */
+[hidden] {
+    display: none !important;
+}
+
+#Contact {
+    border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#Contact:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+}
+
+#info {
+    border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#info:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+}
+/* ── Inputs ── */
+#mail,
+#message {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+
+  font-family: var(--font-sans);
+  font-size: .75rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+}
+
+#mail::placeholder,
+#message::placeholder {
+  color: #aaa;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+#mail:focus,
+#message:focus {
+  border-color: var(--charcoal);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+#message {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* ── Boutons ── */
+#envoyer,
+#ferme {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: 1.5px solid #000000;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: .75rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+#envoyer:hover,
+#ferme:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+#fermeinfo {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: 1.5px solid #000000;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: .75rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+#fermeinfo:hover {
+  background: #000000;
+  color: #ffffff;
+}
+#popinfo span {
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#retour {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: 1.5px solid #000000;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  background: transparent;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: .75rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+#retour:hover {
+  background: #000000;
+  color: #ffffff;
+}
+#detail-collection{
+    text-align: center;
+}
